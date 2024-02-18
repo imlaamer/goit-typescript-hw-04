@@ -22,6 +22,10 @@ type MenuAction = {
   onSelectedMenu: (menu: { id: MenuIds }) => void;
 };
 
+type MenuActionContext = {
+  onSelectedMenu: () => void;
+};
+
 const MenuActionContext = createContext<MenuAction>({
   onSelectedMenu: noop,
 });
